@@ -1,0 +1,28 @@
+﻿@*<h3>Exception Details</h3>
+    <div class="alert alert-danger">
+        <h5>Exception Path</h5>
+        <hr />
+        <p>@ViewBag.ExceptionPath</p>
+    </div>
+
+    <div class="alert alert-danger">
+        <h5>Exception Message</h5>
+        <hr />
+        <p>@ViewBag.ExceptionMessage</p>
+    </div>
+
+    <div class="alert alert-danger">
+        <h5>Exception Stack Trace</h5>
+        <hr />
+        <p>@ViewBag.StackTrace</p>
+    </div>*@
+
+@if (ViewBag.ErrorTitle == null)
+{
+    <h3>An error occured while processing your request. The support team is notified and we are working on the fix.</h3>
+}
+else
+{
+    <h5 class="text-danger">@ViewBag.ErrorTitle</h5>
+    <h5 class="text-danger">@ViewBag.ErrorMessage</h5>
+}
